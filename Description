@@ -1,0 +1,5 @@
+The way the code works is firstly, it accesses the RSS of our desired news paper (in this case aljazeera), after which it extracts the relevant info of the latest 5 articles, including: title, link, summary, and publish date.
+After this the code accesses the main article content using an html parser and specifying the name of the header we want to read from, which can be done using inspect element on the article.
+It then sends this article content to Gemini to summarize it using a prompt asking it to do so, after setting a valid API key.
+It then adds this article's details to an array called "articles" where each entry is a dictionary taht includes all the mentioned details of an article.
+I also set up a UI for this code using flask and HTML.
