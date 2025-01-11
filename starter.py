@@ -6,7 +6,7 @@ import google.generativeai as genai
 
 genai.configure(api_key="AIzaSyAguJg4_viVEz_d7tcLuWJiQ8RGHX-bYns")
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder=".")
 
 def summarize(text):
     model = genai.GenerativeModel("gemini-1.5-flash")
